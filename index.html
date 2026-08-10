@@ -41,7 +41,7 @@
 
     <style>
         html {
-            font-size: 28px !important; /* Texto un poco más grande */
+            font-size: 24px !important; /* Retornado a 24px para evitar overflow vertical */
         }
 
         /* Base Reveal Overrides */
@@ -125,14 +125,12 @@
         .double-bezel-inner video {
             width: 100%;
             height: auto;
-            max-height: 100%;
+            max-height: 400px; /* Constrain max-height explicitly en 1080p canvas */
             object-fit: contain !important; 
             display: block;
             margin: 0;
-        }
-
-        /* Custom Bullet Points */
-        .custom-bullet {
+            border-radius: calc(2rem - 0.75rem);
+        }.custom-bullet {
             list-style: none !important;
             padding-left: 0 !important;
             margin: 0 !important;
