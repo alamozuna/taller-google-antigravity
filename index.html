@@ -202,23 +202,30 @@
         <div class="slides">
 
             <!-- Diapositiva 1: Portada -->
-            <section data-transition="fade">
-                <div class="grid grid-cols-2 gap-12 items-center h-full">
-                    <div class="text-left">
-                        <div class="eyebrow-badge">Taller de Capacitación</div>
-                        <h1 class="text-6xl font-extrabold leading-[1.1] mb-6">
-                            <span class="text-gradient">Google</span><br>
-                            <span class="text-gradient-gold">Antigravity 2.0</span>
-                        </h1>
-                        <p class="text-xl text-white/60 mb-8 italic">Desarrollo de Apps con IA Agéntica</p>
-                        <p class="text-sm font-bold text-white/40">We Are ON IT • Barcelona</p>
-                    </div>
-                    <div>
-                        <div class="double-bezel">
-                            <div class="double-bezel-inner">
-                                <img src="./assets/antigravity_hero_1786392916220.png" alt="Hero Illustration">
+            <section data-transition="fade" data-background-gradient="radial-gradient(circle at center, #1F4E79 0%, #16324F 60%, #1A1A1A 100%)">
+                <div class="h-full flex flex-col justify-center items-center relative py-20">
+                    <!-- Tech overlay grids for background -->
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDQwTTAgMjBoNDBNMCAzMGg0ME0xMCAwdjQwTTIwIDB2NDBNMzAgMHY0MCIgc3Ryb2tlPSJyZ2JhKDI0NCwxOTcsNjYsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')] opacity-50"></div>
+                    
+                    <div class="text-center z-10 relative">
+                        <div class="flex justify-center items-center mb-10">
+                            <!-- SVG logo icon placeholder matching the reference -->
+                            <div class="w-16 h-16 rounded-full border-4 border-primary flex items-center justify-center mr-6 shadow-[0_0_20px_rgba(244,197,66,0.6)]">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7" />
+                                </svg>
                             </div>
+                            <h1 class="text-6xl font-bold"><span class="text-white">We Are </span><span class="text-primary">On It</span></h1>
                         </div>
+                        
+                        <h1 class="text-[5.5rem] font-extrabold leading-[1.2] mb-12 text-white drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
+                            Taller de Desarrollo y<br>
+                            Gestión de Aplicaciones
+                        </h1>
+                        
+                        <div class="h-1 w-[90%] mx-auto bg-gradient-to-r from-transparent via-primary to-transparent mb-10 opacity-90 shadow-[0_0_15px_rgba(244,197,66,0.9)]"></div>
+                        
+                        <p class="text-4xl text-white/90 font-light tracking-wide drop-shadow-md">Construyendo el Futuro de We Are On It con Inteligencia Agéntica</p>
                     </div>
                 </div>
             </section>
@@ -310,33 +317,50 @@
                   </div>
               </section>
 
-            <!-- Diapositiva 6: Plataformas -->
-            <section data-transition="slide">
-                <div class="eyebrow-badge">Infraestructura</div>
-                <h2 class="text-4xl font-bold mb-8 text-left">Plataformas y Flujo CI/CD</h2>
-                <div class="grid grid-cols-2 gap-10 items-start">
-                    <div class="text-left">
-                        <h3 class="text-2xl font-bold text-primary mb-2">GitHub: La Bóveda</h3>
-                        <p class="text-sm text-white/70 mb-4">Almacén central del código. Permite historial de versiones seguro y colaboración entre humanos y agentes IA.</p>
-                        <div class="double-bezel">
-                            <div class="double-bezel-inner">
-                                <!-- Usando la imagen estática ya que el webp original pesaba 11kb y estaba corrupto -->
-                                <img src="./assets/github_homepage_1786392064086.png" alt="GitHub">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-left">
-                        <h3 class="text-2xl font-bold text-primary mb-2">Vercel: Publicador Instantáneo</h3>
-                        <p class="text-sm text-white/70 mb-4">Integración continua. Escucha a GitHub y compila automáticamente cada commit hacia una URL en vivo.</p>
-                        <div class="double-bezel">
-                            <div class="double-bezel-inner">
-                                <!-- Animación WebP -->
-                                <img src="./assets/vercel_screenshots_1786392076764.webp" alt="Vercel">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <!-- Diapositiva 6: Vercel -->
+              <section data-transition="slide">
+                  <h2 class="text-6xl font-bold text-center mb-16">El Publicador Instantáneo: <span class="text-white">Vercel</span></h2>
+                  
+                  <div class="flex justify-between items-center mb-16 px-4 relative mt-12">
+                      <!-- Línea conectora -->
+                      <div class="absolute left-16 right-16 h-6 bg-gradient-to-r from-blue-500 via-primary to-green-500 top-1/2 transform -translate-y-1/2 -z-10 opacity-70 rounded-full shadow-[0_0_20px_rgba(244,197,66,0.8)]"></div>
+                      
+                      <!-- GitHub -->
+                      <div class="glass-card text-center p-8 w-1/4 relative border-blue-500/40 bg-blue-900/30">
+                          <h3 class="text-4xl font-bold text-white mb-2">GitHub</h3>
+                          <p class="text-xl text-white/70">El Código / The Vault</p>
+                      </div>
+                      
+                      <!-- Vercel -->
+                      <div class="glass-card text-center p-12 w-1/3 border-primary bg-navy/90 shadow-[0_0_40px_rgba(244,197,66,0.6)] relative transform scale-110 z-10">
+                          <!-- Animación Engranaje -->
+                          <div class="absolute -top-8 -right-8 text-7xl animate-[spin_10s_linear_infinite]">⚙️</div>
+                          <h3 class="text-6xl font-bold text-white mb-4">Vercel</h3>
+                          <p class="text-2xl text-primary font-bold">Motor de Construcción</p>
+                      </div>
+                      
+                      <!-- App -->
+                      <div class="glass-card text-center p-8 w-1/4 relative border-green-500/40 bg-green-900/30">
+                          <h3 class="text-4xl font-bold text-white mb-2">App en Vivo</h3>
+                          <p class="text-xl text-white/70">Experiencia del Huésped</p>
+                      </div>
+                  </div>
+                  
+                  <div class="grid grid-cols-3 gap-12 px-6">
+                      <div class="text-center glass-card p-6 border-transparent bg-transparent shadow-none">
+                          <h4 class="text-3xl font-bold text-white mb-4">Integración Nativa</h4>
+                          <p class="text-xl text-white/70">Se conecta directamente con la bóveda de GitHub.</p>
+                      </div>
+                      <div class="text-center glass-card p-6 border-transparent bg-transparent shadow-none">
+                          <h4 class="text-3xl font-bold text-white mb-4">Flujo Continuo (CI/CD)</h4>
+                          <p class="text-xl text-white/70">Construye la aplicación automáticamente en cuanto Antigravity y tu equipo aprueban un cambio.</p>
+                      </div>
+                      <div class="text-center glass-card p-6 border-transparent bg-transparent shadow-none">
+                          <h4 class="text-3xl font-bold text-white mb-4">Publicación Automática</h4>
+                          <p class="text-xl text-white/70">Despliega la actualización en internet de manera instantánea y segura para nuestros usuarios.</p>
+                      </div>
+                  </div>
+              </section>
 
             <!-- Diapositiva 7: Tutorial 1 -->
             <section data-transition="slide">
