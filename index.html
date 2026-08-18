@@ -1073,6 +1073,381 @@
                 </div>
             </section>
 
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <!-- PARTE 2: FLUJO DE CORRECCIONES EN LAS APPS (DOCX PASOS)     -->
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <!-- Portada Flujo de Correcciones -->
+            <section id="flujo-correcciones" data-transition="fade" data-background-gradient="radial-gradient(circle at center, #1F4E79 0%, #16324F 60%, #1A1A1A 100%)">
+                <div class="h-full flex flex-col justify-center items-center relative py-12">
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDQwTTAgMjBoNDBNMCAzMGg0ME0xMCAwdjQwTTIwIDB2NDBNMzAgMHY0MCIgc3Ryb2tlPSJyZ2JhKDI0NCwxOTcsNjYsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')] opacity-50"></div>
+
+                    <div class="text-center z-10 relative max-w-5xl">
+                        <div class="eyebrow-badge" style="background: rgba(244, 197, 66, 0.15); color: #F4C542; border-color: rgba(244, 197, 66, 0.3);">Flujo Operativo • Paso a Paso</div>
+                        <div class="text-7xl mb-4 animate-bounce">⚡</div>
+                        <h1 class="text-[4.5rem] font-extrabold leading-[1.15] mb-6 text-white drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
+                            Correcciones en las Apps
+                        </h1>
+                        <p class="text-3xl text-primary font-bold tracking-wide mb-8">Google Antigravity ➔ GitHub (MCP) ➔ Vercel</p>
+                        <div class="h-1 w-[60%] mx-auto bg-gradient-to-r from-transparent via-primary to-transparent mb-10 opacity-90 shadow-[0_0_15px_rgba(244,197,66,0.9)]"></div>
+                        
+                        <div class="grid grid-cols-3 gap-6 text-left">
+                            <div class="glass-card p-5 border-l-4 border-l-primary bg-[#16324F]/70">
+                                <span class="text-2xl mb-2 block">1️⃣ 📂</span>
+                                <h4 class="text-lg font-bold text-white mb-1">Aislar el Workspace</h4>
+                                <p class="text-xs text-white/70">Abrir el repositorio local específico de la app.</p>
+                            </div>
+                            <div class="glass-card p-5 border-l-4 border-l-orange-400 bg-[#16324F]/70">
+                                <span class="text-2xl mb-2 block">2️⃣ 💬</span>
+                                <h4 class="text-lg font-bold text-white mb-1">Prompt + Capturas</h4>
+                                <p class="text-xs text-white/70">Instrucción clara, URL en vivo y captura de referencia.</p>
+                            </div>
+                            <div class="glass-card p-5 border-l-4 border-l-green-400 bg-[#16324F]/70">
+                                <span class="text-2xl mb-2 block">3️⃣ 🚀</span>
+                                <h4 class="text-lg font-bold text-white mb-1">Push MCP &amp; Vercel</h4>
+                                <p class="text-xs text-white/70">Sincronización segura y verificación en producción.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Flujo de Correcciones • Paso 1 -->
+            <section data-transition="slide">
+                <div class="eyebrow-badge">Flujo de Correcciones • Paso 1</div>
+                <h2 class="text-5xl font-bold text-left mb-6">Paso 1: Destinar una <span class="text-primary">Carpeta o Workspace</span></h2>
+
+                <div class="grid grid-cols-12 gap-8 items-center text-left">
+                    <!-- Columna Izquierda: Instrucciones -->
+                    <div class="col-span-5 space-y-4">
+                        <div class="glass-card p-6 border-l-4 border-l-primary">
+                            <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
+                                <span>📁</span> Delimitar el Contexto
+                            </h3>
+                            <ul class="custom-bullet text-lg space-y-3">
+                                <li>Haz clic en el ícono <strong>"Create New Project"</strong> en el panel lateral izquierdo de Antigravity.</li>
+                                <li>Navega en tu explorador y selecciona la carpeta local del proyecto (ej: <code>Protocolo de prueba para el taller</code>).</li>
+                                <li>Pulsa el botón <strong>"Select Folder"</strong> para vincularlo.</li>
+                                <li>Verifica que el nombre de la carpeta aparezca activo sobre la caja de mensajes antes de escribir.</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-primary/10 border border-primary/30 text-sm text-white/80 flex items-center gap-3">
+                            <span class="text-2xl">💡</span>
+                            <p><strong>Clave:</strong> El workspace garantiza que el agente lea únicamente los archivos de esta app y no mezcle código ajeno.</p>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Capturas de Pantalla -->
+                    <div class="col-span-7 space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="double-bezel">
+                                <div class="double-bezel-inner">
+                                    <img src="./assets/correcciones/image1.png" alt="Botón Create New Project" class="w-full object-contain">
+                                </div>
+                                <p class="text-center text-xs text-white/60 mt-1">1. Botón "Create New Project"</p>
+                            </div>
+                            <div class="double-bezel">
+                                <div class="double-bezel-inner">
+                                    <img src="./assets/correcciones/image2.png" alt="Seleccionar Carpeta en Explorador" class="w-full object-contain max-h-[220px]">
+                                </div>
+                                <p class="text-center text-xs text-white/60 mt-1">2. Seleccionar carpeta local del proyecto</p>
+                            </div>
+                        </div>
+
+                        <div class="double-bezel">
+                            <div class="double-bezel-inner">
+                                <img src="./assets/correcciones/image3.png" alt="Workspace Activo en Antigravity" class="w-full object-contain max-h-[250px]">
+                            </div>
+                            <p class="text-center text-xs text-white/60 mt-1">3. Workspace activo confirmado en Antigravity</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Flujo de Correcciones • Paso 2 -->
+            <section data-transition="slide">
+                <div class="eyebrow-badge">Flujo de Correcciones • Paso 2</div>
+                <h2 class="text-5xl font-bold text-left mb-6">Paso 2: Especificar <span class="text-primary">Proyecto, Prompt y Capturas</span></h2>
+
+                <div class="grid grid-cols-12 gap-8 items-center text-left">
+                    <!-- Columna Izquierda: Instrucciones y Prompt de Ejemplo -->
+                    <div class="col-span-5 space-y-4">
+                        <div class="glass-card p-6 border-l-4 border-l-primary">
+                            <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
+                                <span>🎯</span> Prompting con Contexto Rico
+                            </h3>
+                            <ul class="custom-bullet text-lg space-y-3">
+                                <li><strong>URL en Vivo:</strong> Pega el link de la app en Vercel para que el agente reconozca la interfaz.</li>
+                                <li><strong>Instrucción Precisa:</strong> Describe qué texto o elemento visual deseas cambiar y en qué sección.</li>
+                                <li><strong>Adjuntar Capturas:</strong> Añade pantallazos de la zona específica para darle visión al agente.</li>
+                                <li><strong>Selección de Modelo:</strong> Asegúrate de usar <code>Gemini 3.5 Flash</code> o <code>Gemini 3.7 Flash</code>.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Caja de Prompt Copiable -->
+                        <div class="glass-card p-4 bg-black/40 border border-white/10 rounded-xl space-y-2">
+                            <div class="flex items-center justify-between text-xs text-primary font-mono font-bold">
+                                <span>PROMPT DE EJEMPLO:</span>
+                                <button onclick="copyTextToClipboard('https://protocolo-prueba-taller.vercel.app/ de esta app, quiero agregar un mensaje abajo que diga: Alam is the Best', this)" class="text-[11px] bg-white/10 hover:bg-white/20 text-white px-2 py-1 rounded transition">Copiar</button>
+                            </div>
+                            <p class="font-mono text-xs text-white/90 leading-relaxed bg-black/30 p-2.5 rounded select-all break-words">
+                                https://protocolo-prueba-taller.vercel.app/ de esta app, quiero agregar un mensaje abajo que diga: Alam is the Best
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Capturas de Pantalla -->
+                    <div class="col-span-7 space-y-4">
+                        <div class="double-bezel">
+                            <div class="double-bezel-inner">
+                                <img src="./assets/correcciones/image4.png" alt="Prompt con URL y captura adjunta" class="w-full object-contain max-h-[250px]">
+                            </div>
+                            <p class="text-center text-xs text-white/60 mt-1">Prompt con URL de Vercel + Instrucción + Captura de referencia</p>
+                        </div>
+
+                        <div class="double-bezel">
+                            <div class="double-bezel-inner">
+                                <img src="./assets/correcciones/image5.png" alt="Selector de Modelo Gemini" class="w-full object-contain max-h-[160px]">
+                            </div>
+                            <p class="text-center text-xs text-white/60 mt-1">Verificación del modelo de IA seleccionado (Gemini Flash / Pro)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Flujo de Correcciones • Paso 3 -->
+            <section data-transition="slide">
+                <div class="eyebrow-badge">Flujo de Correcciones • Paso 3</div>
+                <h2 class="text-5xl font-bold text-left mb-6">Paso 3: Sincronizar Cambios con <span class="text-primary">GitHub MCP</span></h2>
+
+                <div class="grid grid-cols-12 gap-8 items-center text-left">
+                    <!-- Columna Izquierda: Instrucciones y Permisos -->
+                    <div class="col-span-5 space-y-4">
+                        <div class="glass-card p-6 border-l-4 border-l-primary">
+                            <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
+                                <span>🐙</span> Subida Automática a GitHub
+                            </h3>
+                            <ul class="custom-bullet text-base space-y-2.5">
+                                <li>Antigravity aplica el código localmente y valida la compilación con <code>npm run build</code>.</li>
+                                <li>Pídele al agente realizar el control de versiones usando el MCP de We Are On It.</li>
+                                <li>Cuando aparezca el modal de seguridad para la herramienta <code>github/push_files</code>:</li>
+                                <li class="pl-4 text-primary font-bold">➔ Selecciona la opción: <code>4. Yes, and always allow</code> y presiona <strong>Submit</strong>.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Caja de Prompt Copiable -->
+                        <div class="glass-card p-4 bg-black/40 border border-white/10 rounded-xl space-y-2">
+                            <div class="flex items-center justify-between text-xs text-primary font-mono font-bold">
+                                <span>PROMPT PARA PUSH CON MCP:</span>
+                                <button onclick="copyTextToClipboard('Necesito ahora que hagas el control de versiones en github utilizando el mcp de weareonit, para asi ver los cambios reflejados en el link de vercel', this)" class="text-[11px] bg-white/10 hover:bg-white/20 text-white px-2 py-1 rounded transition">Copiar</button>
+                            </div>
+                            <p class="font-mono text-xs text-white/90 leading-relaxed bg-black/30 p-2.5 rounded select-all break-words">
+                                Necesito ahora que hagas el control de versiones en github utilizando el mcp de weareonit, para asi ver los cambios reflejados en el link de vercel
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Capturas de Pantalla -->
+                    <div class="col-span-7 space-y-3">
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="double-bezel">
+                                <div class="double-bezel-inner">
+                                    <img src="./assets/correcciones/image6.png" alt="Walkthrough y cambios locales" class="w-full object-contain max-h-[220px]">
+                                </div>
+                                <p class="text-center text-[11px] text-white/60 mt-1">1. Cambios y build local verificados</p>
+                            </div>
+                            <div class="double-bezel">
+                                <div class="double-bezel-inner">
+                                    <img src="./assets/correcciones/image7.png" alt="Prompt solicitando push con MCP" class="w-full object-contain max-h-[220px]">
+                                </div>
+                                <p class="text-center text-[11px] text-white/60 mt-1">2. Prompt pidiendo versionado MCP</p>
+                            </div>
+                        </div>
+
+                        <div class="double-bezel border-primary/40 bg-primary/5">
+                            <div class="double-bezel-inner">
+                                <img src="./assets/correcciones/image8.png" alt="Permisos MCP github/push_files opción 4" class="w-full object-contain max-h-[250px]">
+                            </div>
+                            <p class="text-center text-xs text-primary font-bold mt-1">3. Seleccionar "4 Yes, and always allow" y Submit</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Flujo de Correcciones • Paso 4 -->
+            <section data-transition="slide">
+                <div class="eyebrow-badge">Flujo de Correcciones • Paso 4</div>
+                <h2 class="text-5xl font-bold text-left mb-6">Paso 4: Confirmación y <span class="text-primary">Despliegue en Vercel</span></h2>
+
+                <div class="grid grid-cols-12 gap-8 items-center text-left">
+                    <!-- Columna Izquierda: Instrucciones -->
+                    <div class="col-span-5 space-y-4">
+                        <div class="glass-card p-6 border-l-4 border-l-primary">
+                            <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
+                                <span>🚀</span> Pipeline Automatizado
+                            </h3>
+                            <ul class="custom-bullet text-lg space-y-3">
+                                <li>El agente informa que los archivos se enviaron correctamente a GitHub mediante el servidor MCP.</li>
+                                <li>Genera un commit con mensaje descriptivo (ej: <code>feat: add 'Alam is the best' to the page footer</code>).</li>
+                                <li>Al empujar a la rama <code>main</code>, GitHub notifica a Vercel y se activa la compilación de producción.</li>
+                                <li>El agente te entrega el enlace web directo para verificar.</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-green-500/10 border border-green-500/30 text-sm text-green-300 flex items-center gap-3">
+                            <span class="text-2xl">⚡</span>
+                            <p><strong>Cero terminal:</strong> Todo el flujo Git (add, commit, push) ocurre de forma transparente a través del MCP.</p>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Captura de Pantalla -->
+                    <div class="col-span-7">
+                        <div class="double-bezel">
+                            <div class="double-bezel-inner">
+                                <img src="./assets/correcciones/image9.png" alt="Confirmación del commit y enlace a Vercel" class="w-full object-contain max-h-[500px]">
+                            </div>
+                            <p class="text-center text-xs text-white/60 mt-2">Respuesta del agente confirmando commit en GitHub y despliegue automático en Vercel</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Flujo de Correcciones • Paso 5 -->
+            <section data-transition="slide">
+                <div class="eyebrow-badge">Flujo de Correcciones • Paso 5</div>
+                <h2 class="text-5xl font-bold text-left mb-6">Paso 5: En caso de no ver cambios: <span class="text-primary">Auto-Recuperación</span></h2>
+
+                <div class="grid grid-cols-12 gap-8 items-center text-left">
+                    <!-- Columna Izquierda: Instrucciones y Prompt de Recuperación -->
+                    <div class="col-span-5 space-y-4">
+                        <div class="glass-card p-6 border-l-4 border-l-orange-400">
+                            <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
+                                <span>🛠️</span> ¿No se reflejan en la web?
+                            </h3>
+                            <ul class="custom-bullet text-base space-y-2.5">
+                                <li>A veces GitHub Actions o la cola de Vercel pueden tardar unos minutos o quedar en caché.</li>
+                                <li><strong>No te preocupes ni toques configuraciones manuales:</strong> simplemente escribe al agente:</li>
+                                <li class="pl-4 font-mono text-sm text-orange-300 font-bold">"Todavia no veo los cambios en vercel"</li>
+                                <li>Antigravity ejecuta <code>npx vercel list</code>, diagnostica el estado y fuerza un despliegue directo a producción con <code>npx vercel --prod --yes</code>.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Caja de Prompt Copiable -->
+                        <div class="glass-card p-4 bg-black/40 border border-white/10 rounded-xl space-y-2">
+                            <div class="flex items-center justify-between text-xs text-orange-400 font-mono font-bold">
+                                <span>PROMPT DE AUTO-RECUPERACIÓN:</span>
+                                <button onclick="copyTextToClipboard('Todavia no veo los cambios en vercel', this)" class="text-[11px] bg-white/10 hover:bg-white/20 text-white px-2 py-1 rounded transition">Copiar</button>
+                            </div>
+                            <p class="font-mono text-xs text-white/90 leading-relaxed bg-black/30 p-2.5 rounded select-all break-words">
+                                Todavia no veo los cambios en vercel
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Capturas de Pantalla -->
+                    <div class="col-span-7 space-y-3">
+                        <div class="double-bezel">
+                            <div class="double-bezel-inner">
+                                <img src="./assets/correcciones/image10.png" alt="Prompt: Todavia no veo los cambios en vercel" class="w-full object-contain max-h-[120px]">
+                            </div>
+                            <p class="text-center text-[11px] text-white/60 mt-1">1. Mensaje rápido notificando la demora</p>
+                        </div>
+
+                        <div class="double-bezel">
+                            <div class="double-bezel-inner">
+                                <img src="./assets/correcciones/image11.png" alt="Diagnóstico y despliegue directo de Antigravity" class="w-full object-contain max-h-[360px]">
+                            </div>
+                            <p class="text-center text-[11px] text-white/60 mt-1">2. Diagnóstico autónomo y despliegue directo forzado con éxito</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Flujo de Correcciones • Paso 6 -->
+            <section data-transition="slide">
+                <div class="eyebrow-badge">Flujo de Correcciones • Paso 6</div>
+                <h2 class="text-5xl font-bold text-left mb-6">Paso 6: Comprobar el <span class="text-primary">Resultado en Vivo</span></h2>
+
+                <div class="grid grid-cols-12 gap-8 items-center text-left">
+                    <!-- Columna Izquierda: Instrucciones -->
+                    <div class="col-span-5 space-y-4">
+                        <div class="glass-card p-6 border-l-4 border-l-green-400">
+                            <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-2">
+                                <span>🌐</span> Validación en Producción
+                            </h3>
+                            <ul class="custom-bullet text-lg space-y-3">
+                                <li>Abre el enlace de la aplicación en tu navegador.</li>
+                                <li>Si el cambio no aparece de inmediato, recarga con <kbd class="px-2 py-1 bg-black/40 rounded border border-white/20 text-sm font-mono">Ctrl + F5</kbd> o <kbd class="px-2 py-1 bg-black/40 rounded border border-white/20 text-sm font-mono">Cmd + Shift + R</kbd> para limpiar caché.</li>
+                                <li>Comprueba que la modificación solicitada esté en vivo exactamente donde se indicó.</li>
+                            </ul>
+                        </div>
+
+                        <div class="glass-card p-5 bg-green-950/30 border border-green-500/40 rounded-xl">
+                            <div class="flex items-center gap-3 text-green-400 font-bold text-lg mb-2">
+                                <span>✅</span> Resultado Obtenido
+                            </div>
+                            <p class="text-white/80 text-sm leading-relaxed">
+                                El texto <strong class="text-yellow-300 font-mono">"ALAM IS THE BEST"</strong> se renderiza a la perfección en el pie de página de la aplicación ContactCenter Home Club.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Captura de Pantalla -->
+                    <div class="col-span-7">
+                        <div class="double-bezel">
+                            <div class="double-bezel-inner">
+                                <img src="./assets/correcciones/image12.png" alt="Aplicación con los cambios en vivo" class="w-full object-contain max-h-[480px]">
+                            </div>
+                            <p class="text-center text-xs text-white/60 mt-2">Aplicación en producción con el cambio completado y verificado</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resumen del Ciclo de Correcciones -->
+            <section data-transition="slide">
+                <div class="eyebrow-badge">Resumen Operativo</div>
+                <h2 class="text-5xl font-bold text-left mb-6">Resumen: <span class="text-primary">El Ciclo de Corrección Rápida</span></h2>
+
+                <div class="grid grid-cols-3 gap-6 text-left mb-6">
+                    <div class="task-card">
+                        <div class="task-number">1</div>
+                        <h4 class="text-xl font-bold text-white mb-2">1. Workspace Aislado</h4>
+                        <p class="text-sm text-white/70">Abre siempre la carpeta del proyecto específico antes de solicitar cualquier cambio.</p>
+                    </div>
+                    <div class="task-card">
+                        <div class="task-number">2</div>
+                        <h4 class="text-xl font-bold text-white mb-2">2. Prompt + Link + Captura</h4>
+                        <p class="text-sm text-white/70">Pega la URL de Vercel, adjunta pantallazos y da instrucciones claras y concisas.</p>
+                    </div>
+                    <div class="task-card">
+                        <div class="task-number">3</div>
+                        <h4 class="text-xl font-bold text-white mb-2">3. Sincronizar con MCP</h4>
+                        <p class="text-sm text-white/70">Pídele que haga control de versiones en GitHub y autoriza con la opción 4 ("Yes, and always allow").</p>
+                    </div>
+                    <div class="task-card">
+                        <div class="task-number">4</div>
+                        <h4 class="text-xl font-bold text-white mb-2">4. Pipeline Automático</h4>
+                        <p class="text-sm text-white/70">GitHub activa el build de Vercel automáticamente al recibir el nuevo commit en la rama main.</p>
+                    </div>
+                    <div class="task-card">
+                        <div class="task-number">5</div>
+                        <h4 class="text-xl font-bold text-white mb-2">5. Auto-Recuperación</h4>
+                        <p class="text-sm text-white/70">Si hay retrasos, di: "Todavía no veo los cambios en vercel" para que Antigravity fuerce el deploy.</p>
+                    </div>
+                    <div class="task-card">
+                        <div class="task-number">6</div>
+                        <h4 class="text-xl font-bold text-white mb-2">6. Verificación en Vivo</h4>
+                        <p class="text-sm text-white/70">Recarga con Ctrl + F5 y confirma que la corrección esté activa en producción.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl text-center bg-white/5 border border-primary/30">
+                    <p class="text-xl text-white/90">🎯 <strong>¡Dominaste el flujo de corrección continua con Antigravity, GitHub y Vercel!</strong></p>
+                </div>
+            </section>
+
         </div>
     </div>
 
@@ -1092,6 +1467,24 @@
                 27: null // Disable pause on Escape
             }
         });
+
+        // Helper para copiar cualquier texto al portapapeles
+        function copyTextToClipboard(text, btn) {
+            navigator.clipboard.writeText(text).then(() => {
+                const oldContent = btn.innerHTML;
+                btn.innerHTML = '<span>✅</span> ¡Copiado!';
+                btn.style.backgroundColor = '#16a34a';
+                btn.style.color = '#ffffff';
+                setTimeout(() => {
+                    btn.innerHTML = oldContent;
+                    btn.style.backgroundColor = '';
+                    btn.style.color = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('Error al copiar:', err);
+                alert('No se pudo copiar automáticamente.');
+            });
+        }
 
         // Contenido Markdown para copiar y descargar GEMINI.md
         const geminiRulesMarkdown = `📈 ANTIGRAVITY RULES - COMPACT ENGINE
@@ -1142,20 +1535,7 @@ Error → Diagnose → Auto-fix → Report → Continue (never stop)
 `;
 
         function copyGeminiRules(btn) {
-            navigator.clipboard.writeText(geminiRulesMarkdown).then(() => {
-                const oldContent = btn.innerHTML;
-                btn.innerHTML = '<span>✅</span> ¡Copiado!';
-                btn.style.backgroundColor = '#16a34a';
-                btn.style.color = '#ffffff';
-                setTimeout(() => {
-                    btn.innerHTML = oldContent;
-                    btn.style.backgroundColor = '';
-                    btn.style.color = '';
-                }, 2000);
-            }).catch(err => {
-                console.error('Error al copiar:', err);
-                alert('No se pudo copiar automáticamente. Por favor selecciona el texto manualmente.');
-            });
+            copyTextToClipboard(geminiRulesMarkdown, btn);
         }
 
         function downloadGeminiRules() {
