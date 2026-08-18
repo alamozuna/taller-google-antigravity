@@ -6,6 +6,9 @@
 
     <title>Taller Google Antigravity 2.0 - We Are On It</title>
 
+    <!-- Favicon 🤖 -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+
     <!-- Reveal.js CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
@@ -183,9 +186,109 @@
             padding: 0.2rem 0.6rem;
             font-size: 0.9em;
         }
+
+        /* Complete Dark Mode Fix for Print & PDF Export */
+        html.print-pdf,
+        body.print-pdf,
+        body.print-pdf .reveal,
+        body.print-pdf .reveal .slides,
+        body.print-pdf .reveal .slides section,
+        body.print-pdf .reveal .backgrounds {
+            background-color: #16324F !important;
+            background: #16324F !important;
+            color: #FFFFFF !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+
+        @media print {
+            .no-print, .controls, .progress, .slide-number {
+                display: none !important;
+            }
+            @page {
+                size: 1920px 1080px landscape;
+                margin: 0;
+            }
+            *, html, body, .reveal, .slides, section {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            html, body {
+                width: 1920px !important;
+                height: 1080px !important;
+                background-color: #16324F !important;
+                background: #16324F !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: visible !important;
+            }
+            .reveal {
+                background-color: #16324F !important;
+                background: #16324F !important;
+                width: 100% !important;
+                height: 100% !important;
+            }
+            .reveal .slides {
+                width: 100% !important;
+                height: auto !important;
+                zoom: 1 !important;
+                transform: none !important;
+                left: 0 !important;
+                top: 0 !important;
+                margin: 0 !important;
+            }
+            .reveal .slides section {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 1920px !important;
+                height: 1080px !important;
+                page-break-after: always !important;
+                break-after: page !important;
+                box-sizing: border-box !important;
+                padding: 60px !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                position: relative !important;
+                top: auto !important;
+                left: auto !important;
+                background-color: #16324F !important;
+                background: #16324F !important;
+                color: #FFFFFF !important;
+            }
+            .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal p, .reveal li {
+                color: #FFFFFF !important;
+            }
+            .text-primary {
+                color: #F4C542 !important;
+            }
+            .glass-card {
+                background: rgba(255, 255, 255, 0.05) !important;
+                border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            }
+            .task-card {
+                background: #1F4E79 !important;
+                border-left: 4px solid #F4C542 !important;
+            }
+            .double-bezel {
+                background: rgba(255, 255, 255, 0.05) !important;
+                border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            }
+            .double-bezel-inner {
+                background: #0D1B2A !important;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Floating Header Bar with Robot 🤖 Logo -->
+    <div class="fixed top-5 left-6 z-50 flex items-center gap-3 bg-[#16324F]/80 backdrop-blur-md px-4 py-2 rounded-full border border-primary/30 shadow-[0_0_15px_rgba(244,197,66,0.25)] no-print pointer-events-auto">
+        <span class="text-2xl animate-pulse">🤖</span>
+        <span class="text-white font-bold text-sm tracking-wider font-display">Antigravity <span class="text-primary">2.0</span></span>
+    </div>
     <div class="reveal">
         <div class="slides">
 
@@ -197,11 +300,9 @@
                     
                     <div class="text-center z-10 relative">
                         <div class="flex justify-center items-center mb-10">
-                            <!-- SVG logo icon -->
-                            <div class="w-16 h-16 rounded-full border-4 border-primary flex items-center justify-center mr-6 shadow-[0_0_20px_rgba(244,197,66,0.6)]">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7" />
-                                </svg>
+                            <!-- Glowing Robot 🤖 logo icon -->
+                            <div class="w-20 h-20 rounded-full border-4 border-primary bg-primary/20 flex items-center justify-center mr-6 shadow-[0_0_30px_rgba(244,197,66,0.8)] text-4xl">
+                                🤖
                             </div>
                             <h1 class="text-6xl font-bold"><span class="text-white">We Are </span><span class="text-primary">On It</span></h1>
                         </div>
@@ -218,23 +319,67 @@
                 </div>
             </section>
 
+            <!-- Diapositiva 1.5: Navegación del Taller -->
+            <section data-transition="fade" data-background-gradient="radial-gradient(circle at center, #1F4E79 0%, #16324F 60%, #1A1A1A 100%)">
+                <div class="h-full flex flex-col justify-center items-center relative py-20">
+                    <!-- Tech overlay grids for background -->
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDQwTTAgMjBoNDBNMCAzMGg0ME0xMCAwdjQwTTIwIDB2NDBNMzAgMHY0MCIgc3Ryb2tlPSJyZ2JhKDI0NCwxOTcsNjYsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')] opacity-50"></div>
+
+                    <div class="text-center z-10 relative">
+                        <div class="eyebrow-badge">Estructura del Taller</div>
+                        <h2 class="text-6xl font-bold mb-6 text-white">¿Por dónde empezamos?</h2>
+                        <p class="text-2xl text-white/60 mb-16">Selecciona la sección del taller a la que deseas ir:</p>
+
+                        <div class="grid grid-cols-2 gap-10 px-12">
+                            <!-- Botón Parte 1 -->
+                            <a href="#" onclick="event.preventDefault(); Reveal.next();" class="glass-card border-primary/40 hover:border-primary hover:shadow-[0_0_40px_rgba(244,197,66,0.4)] transition-all duration-500 cursor-pointer group block no-underline" style="text-decoration: none;">
+                                <div class="text-center p-6">
+                                    <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">📚</div>
+                                    <h3 class="text-4xl font-bold text-white mb-4 group-hover:text-primary transition-colors">Parte 1 del Taller</h3>
+                                    <div class="h-1 w-24 mx-auto bg-primary/50 group-hover:bg-primary group-hover:w-40 transition-all duration-500 mb-6 rounded-full"></div>
+                                    <p class="text-xl text-white/70 leading-relaxed">Teoría, conceptos y herramientas</p>
+                                    <p class="text-lg text-white/40 mt-4">Casos de éxito · Arquitectura · GitHub · Vercel · MCP · Instalación</p>
+                                    <div class="mt-6 inline-flex items-center gap-2 text-primary font-bold text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        Comenzar <span class="text-2xl">→</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- Botón Parte 2 -->
+                            <a href="#/parte-practica" onclick="event.preventDefault(); Reveal.slide(Reveal.getIndices(document.getElementById('parte-practica')).h);" class="glass-card border-orange-500/40 hover:border-orange-500 hover:shadow-[0_0_40px_rgba(249,115,22,0.4)] transition-all duration-500 cursor-pointer group block no-underline" style="text-decoration: none;">
+                                <div class="text-center p-6">
+                                    <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">🚀</div>
+                                    <h3 class="text-4xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors">Parte 2 del Taller</h3>
+                                    <div class="h-1 w-24 mx-auto bg-orange-500/50 group-hover:bg-orange-500 group-hover:w-40 transition-all duration-500 mb-6 rounded-full"></div>
+                                    <p class="text-xl text-white/70 leading-relaxed">Parte práctica, operativa — lo que vinimos a ver</p>
+                                    <p class="text-lg text-white/40 mt-4">Ejercicios en vivo · Prompts reales · Construcción paso a paso</p>
+                                    <div class="mt-6 inline-flex items-center gap-2 text-orange-400 font-bold text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        Ir a la práctica <span class="text-2xl">→</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Diapositiva 2: Casos de Éxito 1 -->
             <section data-transition="slide">
                 <div class="eyebrow-badge">Impacto Real</div>
-                <h2 class="text-6xl font-bold text-left mb-10">Contact Center <span class="text-primary">Lodging App</span></h2>
+                <h2 class="text-6xl font-bold text-left mb-10">Construir Presentaciones <span class="text-primary">de forma Profesional</span></h2>
                 <div class="grid grid-cols-2 gap-12 items-center">
                     <div class="text-left">
                         <ul class="custom-bullet text-2xl space-y-4">
-                            <li>Software interno automatizado para recepción y asignación de alojamientos.</li>
-                            <li><strong>Soporte out-of-office:</strong> L-V 17:00-09:00, Sábados, Domingos y Festivos 24h.</li>
-                            <li><strong>Gestión de incidencias tipificadas:</strong> Acceso, Admin, Agua, Wi-Fi, Electricidad, Limpieza, A/C.</li>
+                            <li>Borrador de oferta laboral transformado en presentación profesional con Antigravity.</li>
+                            <li><strong>Diseño automatizado:</strong> Tipografía, paleta de colores, estructura y animaciones generadas por IA.</li>
+                            <li><strong>Resultado:</strong> Una presentación lista para producción, desplegada en minutos con cero código manual.</li>
                         </ul>
                     </div>
                     <div>
                         <div class="double-bezel">
                             <div class="double-bezel-inner">
                                 <!-- Animacion WebP sin cortes gracias a object-contain -->
-                                <img src="./assets/contact.webp" alt="Contact Center Video">
+                                <img src="./assets/contact.webp" alt="Presentación Profesional Video">
                             </div>
                         </div>
                     </div>
@@ -743,6 +888,92 @@
                         <h4 class="text-2xl font-bold text-white mb-3">Asignación de Workspace</h4>
                         <p class="text-xl text-white/70 leading-relaxed">Vincular Antigravity con la carpeta local de tu proyecto para aislar el contexto.</p>
                     </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════ -->
+            <!-- PARTE 2: SECCIÓN PRÁCTICA DEL TALLER       -->
+            <!-- ═══════════════════════════════════════════ -->
+
+            <!-- Portada Parte 2 -->
+            <section id="parte-practica" data-transition="fade" data-background-gradient="radial-gradient(circle at center, #4a2810 0%, #1A1A1A 70%)">
+                <div class="h-full flex flex-col justify-center items-center relative py-20">
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDQwTTAgMjBoNDBNMCAzMGg0ME0xMCAwdjQwTTIwIDB2NDBNMzAgMHY0MCIgc3Ryb2tlPSJyZ2JhKDI0OSwxMTUsMjIsMC4wOCkiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')] opacity-50"></div>
+
+                    <div class="text-center z-10 relative">
+                        <div class="eyebrow-badge" style="background: rgba(249,115,22,0.15); color: #f97316; border-color: rgba(249,115,22,0.3);">Parte 2 • Práctica</div>
+                        <div class="text-8xl mb-8">🚀</div>
+                        <h1 class="text-[5rem] font-extrabold leading-[1.2] mb-8 text-white drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
+                            Manos a la Obra
+                        </h1>
+                        <div class="h-1 w-[70%] mx-auto bg-gradient-to-r from-transparent via-orange-500 to-transparent mb-10 opacity-90 shadow-[0_0_15px_rgba(249,115,22,0.9)]"></div>
+                        <p class="text-3xl text-white/80 font-light tracking-wide">La parte práctica y operativa del taller</p>
+                        <p class="text-xl text-white/50 mt-4">Ejercicios en vivo con Google Antigravity 2.0</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Práctica: Instrucciones generales -->
+            <section data-transition="slide">
+                <div class="eyebrow-badge" style="background: rgba(249,115,22,0.15); color: #f97316; border-color: rgba(249,115,22,0.3);">Instrucciones</div>
+                <h2 class="text-5xl font-bold text-left mb-8">¿Cómo funciona la <span style="color: #f97316;">parte práctica</span>?</h2>
+
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="glass-card border-l-4" style="border-left-color: #f97316;">
+                        <h3 class="text-3xl font-bold mb-4" style="color: #f97316;">🎯 Objetivo</h3>
+                        <p class="text-xl text-white/80 leading-relaxed">
+                            Usar Antigravity 2.0 para construir, modificar o desplegar una aplicación real en vivo — aplicando todo lo aprendido en la Parte 1.
+                        </p>
+                    </div>
+                    <div class="glass-card border-l-4" style="border-left-color: #f97316;">
+                        <h3 class="text-3xl font-bold mb-4" style="color: #f97316;">⚡ Metodología</h3>
+                        <p class="text-xl text-white/80 leading-relaxed">
+                            Seguiremos un flujo guiado paso a paso. Cada participante ejecutará los prompts en su propia instancia de Antigravity.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card mt-8" style="border: 1px solid rgba(249,115,22,0.3);">
+                    <h3 class="text-2xl font-bold text-white mb-4">📋 Pasos de la Práctica</h3>
+                    <div class="grid grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-3" style="background: rgba(249,115,22,0.2); color: #f97316; border: 2px solid #f97316;">1</div>
+                            <p class="text-lg text-white/80">Abrir Antigravity y seleccionar el workspace del proyecto</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-3" style="background: rgba(249,115,22,0.2); color: #f97316; border: 2px solid #f97316;">2</div>
+                            <p class="text-lg text-white/80">Escribir el prompt de creación o modificación del proyecto</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-3" style="background: rgba(249,115,22,0.2); color: #f97316; border: 2px solid #f97316;">3</div>
+                            <p class="text-lg text-white/80">Revisar los cambios generados por el agente y aprobar</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-3" style="background: rgba(249,115,22,0.2); color: #f97316; border: 2px solid #f97316;">4</div>
+                            <p class="text-lg text-white/80">Desplegar a producción con Vercel y verificar en vivo</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Práctica: Requisitos previos -->
+            <section data-transition="slide">
+                <div class="eyebrow-badge" style="background: rgba(249,115,22,0.15); color: #f97316; border-color: rgba(249,115,22,0.3);">Checklist</div>
+                <h2 class="text-5xl font-bold text-left mb-8">Antes de <span style="color: #f97316;">empezar</span></h2>
+
+                <div class="glass-card" style="border: 1px solid rgba(249,115,22,0.3);">
+                    <h3 class="text-3xl font-bold text-white mb-6">✅ Verifica que tienes todo listo</h3>
+                    <ul class="custom-bullet text-xl space-y-5">
+                        <li style="--bullet-color: #f97316;"><strong>Google Antigravity 2.0</strong> instalado y funcionando en tu equipo.</li>
+                        <li style="--bullet-color: #f97316;"><strong>Sesión iniciada</strong> con tu cuenta de Google corporativa.</li>
+                        <li style="--bullet-color: #f97316;"><strong>Servidor MCP de GitHub</strong> configurado con el token de <code>weareonitadmin</code>.</li>
+                        <li style="--bullet-color: #f97316;"><strong>Permisos autónomos</strong> activados (File System, Network, Commands).</li>
+                        <li style="--bullet-color: #f97316;"><strong>Workspace</strong> apuntando a la carpeta local del proyecto que vamos a trabajar.</li>
+                    </ul>
+                </div>
+
+                <div class="mt-8 p-6 rounded-2xl text-center" style="background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.3);">
+                    <p class="text-2xl text-white/90">🎤 <strong>Si te falta algo, avisa ahora.</strong> Revisamos juntos antes de arrancar.</p>
                 </div>
             </section>
 
