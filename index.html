@@ -1732,6 +1732,62 @@ Error → Diagnose → Auto-fix → Report → Continue (never stop)
             URL.revokeObjectURL(url);
         }
     </script>
+
+    <!-- Image Lightbox Modal -->
+    <div id="imageModal" class="fixed inset-0 z-[9999] bg-black/90 hidden items-center justify-center p-8 backdrop-blur-md transition-all duration-300 opacity-0 cursor-zoom-out" onclick="closeModal()">
+        <img id="modalImage" src="" alt="Captura ampliada" class="max-w-full max-h-full object-contain rounded-xl shadow-2xl scale-95 transition-transform duration-300">
+        <div class="absolute top-4 right-6 text-white/50 text-sm font-mono">Haz clic en cualquier parte para cerrar</div>
+    </div>
+
+    <script>
+        function openModal(imgSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = imgSrc;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            // Trigger reflow for animation
+            void modal.offsetWidth;
+            modal.classList.remove('opacity-0');
+            modalImg.classList.remove('scale-95');
+            modalImg.classList.add('scale-100');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.classList.add('opacity-0');
+            modalImg.classList.remove('scale-100');
+            modalImg.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+        }
+
+        // Attach click handlers to all images that look like screenshots
+        document.addEventListener('DOMContentLoaded', () => {
+            // Give reveal.js a moment to initialize before attaching
+            setTimeout(() => {
+                const images = document.querySelectorAll('.double-bezel-inner img');
+                images.forEach(img => {
+                    img.style.cursor = 'zoom-in';
+                    img.classList.add('hover:opacity-80', 'transition-opacity');
+                    img.addEventListener('click', (e) => {
+                        e.stopPropagation(); // prevent triggering other reveal.js clicks
+                        openModal(img.src);
+                    });
+                });
+            }, 500);
+        });
+        
+        // Escape key closes modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !document.getElementById('imageModal').classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
 
