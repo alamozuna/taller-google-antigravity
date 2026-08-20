@@ -57,6 +57,17 @@
             color: #FFFFFF;
         }
 
+        .reveal h2 {
+            max-width: 80% !important;
+        }
+
+        .reveal h2.text-center,
+        .reveal section.text-center h2 {
+            max-width: 75% !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
         .reveal .controls button { color: #F4C542; }
         .reveal .progress span { background-color: #F4C542; }
 
@@ -284,9 +295,9 @@
     </style>
 </head>
 <body>
-    <!-- Floating Header Bar with Robot 🤖 Logo (Top-Right to avoid title overlap) -->
-    <div id="floating-brand-header" class="fixed top-5 right-6 z-50 flex items-center gap-2.5 bg-[#16324F]/85 backdrop-blur-md px-4 py-2 rounded-full border border-primary/30 shadow-[0_0_15px_rgba(244,197,66,0.25)] no-print pointer-events-auto transition-all duration-300">
-        <span class="text-xl animate-pulse">🤖</span>
+    <!-- Floating Header Bar with Robot 🤖 Logo (Top-Right, safe bounds) -->
+    <div id="floating-brand-header" class="fixed top-4 right-6 z-50 flex items-center gap-2 bg-[#16324F]/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-primary/30 shadow-[0_0_15px_rgba(244,197,66,0.25)] no-print pointer-events-auto transition-all duration-300">
+        <span class="text-lg animate-pulse">🤖</span>
         <span class="text-white font-bold text-xs sm:text-sm tracking-wider font-display">Antigravity <span class="text-primary">2.0</span></span>
     </div>
     <div class="reveal">
@@ -492,7 +503,7 @@
             <!-- Diapositiva 6.1: Vercel (Motor de Construcción) -->
             <section data-transition="slide">
                 <div class="eyebrow-badge">El Publicador Instantáneo</div>
-                <h2 class="text-6xl font-bold text-center mb-16">El Publicador Instantáneo: <span class="text-primary">Vercel</span></h2>
+                <h2 class="text-5xl font-bold text-center mb-12 max-w-4xl mx-auto">El Publicador Instantáneo: <span class="text-primary">Vercel</span></h2>
                 
                 <div class="flex justify-between items-center mb-24 px-4 relative mt-16">
                     <!-- Línea conectora animada -->
