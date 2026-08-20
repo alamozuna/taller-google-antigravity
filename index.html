@@ -284,10 +284,10 @@
     </style>
 </head>
 <body>
-    <!-- Floating Header Bar with Robot 🤖 Logo -->
-    <div class="fixed top-5 left-6 z-50 flex items-center gap-3 bg-[#16324F]/80 backdrop-blur-md px-4 py-2 rounded-full border border-primary/30 shadow-[0_0_15px_rgba(244,197,66,0.25)] no-print pointer-events-auto">
-        <span class="text-2xl animate-pulse">🤖</span>
-        <span class="text-white font-bold text-sm tracking-wider font-display">Antigravity <span class="text-primary">2.0</span></span>
+    <!-- Floating Header Bar with Robot 🤖 Logo (Top-Right to avoid title overlap) -->
+    <div id="floating-brand-header" class="fixed top-5 right-6 z-50 flex items-center gap-2.5 bg-[#16324F]/85 backdrop-blur-md px-4 py-2 rounded-full border border-primary/30 shadow-[0_0_15px_rgba(244,197,66,0.25)] no-print pointer-events-auto transition-all duration-300">
+        <span class="text-xl animate-pulse">🤖</span>
+        <span class="text-white font-bold text-xs sm:text-sm tracking-wider font-display">Antigravity <span class="text-primary">2.0</span></span>
     </div>
     <div class="reveal">
         <div class="slides">
@@ -1545,6 +1545,28 @@
             keyboard: {
                 27: null // Disable pause on Escape
             }
+        });
+
+        // Hide floating header on the main cover slide to keep it clean, show on all subsequent slides
+        function updateFloatingBrandLogo(slideIndex) {
+            const logo = document.getElementById('floating-brand-header');
+            if (!logo) return;
+            if (slideIndex === 0) {
+                logo.style.opacity = '0';
+                logo.style.pointerEvents = 'none';
+                logo.style.transform = 'translateY(-10px)';
+            } else {
+                logo.style.opacity = '1';
+                logo.style.pointerEvents = 'auto';
+                logo.style.transform = 'translateY(0)';
+            }
+        }
+
+        Reveal.on('ready', event => {
+            updateFloatingBrandLogo(event.indexh);
+        });
+        Reveal.on('slidechanged', event => {
+            updateFloatingBrandLogo(event.indexh);
         });
 
         // Helper para copiar cualquier texto al portapapeles
